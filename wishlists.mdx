@@ -1,0 +1,80 @@
+---
+title: Managing Wishlists
+description: How to create and manage wishlists for group gift coordination
+---
+
+## Creating Your First Wishlist
+
+Wishlists are the core of Group.Giving, allowing group members to suggest and coordinate gift items without spoilers. Each wishlist can be shared privately within your group, ensuring everyone knows what to get.
+
+<Columns cols={2}>
+  <Card title="Public Items" icon="eye" href="#public">
+    Items visible to all group members for coordination.
+  </Card>
+  <Card title="Private Claims" icon="eye-off" href="#private">
+    Claim items secretly to avoid duplicates.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Web App" icon="monitor">
+    Access wishlists through our web interface for full functionality.
+  </Tab>
+  <Tab title="Mobile" icon="smartphone">
+    Manage lists on the go with our mobile-optimized experience.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">Remember to set realistic price ranges to help your group coordinate effectively.</Callout>
+
+<Expandable title="Advanced Wishlist Features" default-open="false">
+  Use categories, priority levels, and expiration dates to organize your lists better.
+</Expandable>
+
+<Steps>
+  <Step title="Navigate to Wishlists" icon="arrow-right">
+    Go to the wishlists section in your dashboard.
+  </Step>
+  <Step title="Create New List" icon="plus">
+    Click 'New Wishlist' and enter details.
+  </Step>
+  <Step title="Add Items" icon="package">
+    Add items with descriptions and links.
+  </Step>
+  <Step title="Share with Group" icon="share-2">
+    Invite group members to view and claim.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="What makes a good wishlist item?" default-open="true">
+    Include specific details like size, color preferences, and where to purchase.
+  </Expandable>
+  <Expandable title="How to handle duplicates?" default-open="false">
+    The claiming system prevents duplicates automatically.
+  </Expandable>
+</ExpandableGroup>
+
+```javascript
+const exampleWishlist = {
+  name: 'Birthday Gifts',
+  items: [
+    { name: 'Wireless Headphones', claimed: false },
+    { name: 'Coffee Mug Set', claimed: true }
+  ]
+};
+```
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+const wishlistAPI = await fetch('/api/wishlists');
+const data = await wishlistAPI.json();
+```
+  ```python
+import requests
+response = requests.get('/api/wishlists')
+data = response.json()
+```
+</CodeGroup>
+
+Managing wishlists effectively requires clear communication and regular updates. Keep your group informed about changes and coordinate purchases to ensure everyone gets what they want.

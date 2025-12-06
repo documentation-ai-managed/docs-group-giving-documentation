@@ -1,0 +1,68 @@
+{
+  "name": "Group.Giving Documentation",
+  "initialRoute": "introduction",
+  "primaryColor": "#040404",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "star"
+              }
+            ]
+          },
+          {
+            "group": "Core Features",
+            "icon": "settings",
+            "pages": [
+              {
+                "title": "Managing Wishlists",
+                "path": "wishlists",
+                "icon": "list"
+              },
+              {
+                "title": "Claiming Gifts",
+                "path": "claims",
+                "icon": "check"
+              },
+              {
+                "title": "Private Discussions",
+                "path": "discussions",
+                "icon": "message-square"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "openapi": "openapi.yaml"
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}

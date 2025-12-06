@@ -1,0 +1,84 @@
+---
+title: Claiming Gifts
+description: How to claim items on wishlists and manage gift coordination
+---
+
+## Understanding Gift Claims
+
+Gift claiming is the secret weapon of Group.Giving, allowing participants to reserve items anonymously. This prevents duplicates and maintains the surprise element of group gifting.
+
+<Columns cols={3}>
+  <Card title="Anonymous Claims" icon="user-x" href="#anonymous">
+    Claim items without revealing your identity to others.
+  </Card>
+  <Card title="Real-time Updates" icon="refresh-cw" href="#updates">
+    See claim status updates instantly across the group.
+  </Card>
+  <Card title="Conflict Resolution" icon="alert-triangle" href="#conflicts">
+    Handle claim disputes through private messaging.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Quick Claim" icon="zap">
+    One-click claiming for available items.
+  </Tab>
+  <Tab title="Conditional Claims" icon="clock">
+    Reserve items with conditions or time limits.
+  </Tab>
+</Tabs>
+
+<Callout kind="alert">Always check claim status before purchasing to avoid duplicates.</Callout>
+
+<Expandable title="Claim Management Best Practices" default-open="false">
+  Review your claims regularly and communicate with group admins if issues arise.
+</Expandable>
+
+<Steps>
+  <Step title="View Available Items" icon="eye">
+    Browse unclaimed items on group wishlists.
+  </Step>
+  <Step title="Claim Item" icon="check-circle">
+    Click 'Claim' on your chosen item.
+  </Step>
+  <Step title="Confirm Purchase" icon="credit-card">
+    Purchase and mark as completed.
+  </Step>
+  <Step title="Deliver Gift" icon="gift">
+    Coordinate delivery with the recipient.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="What happens when someone else claims first?" default-open="true">
+    You'll receive a notification and can choose another item.
+  </Expandable>
+  <Expandable title="Can I unclaim an item?" default-open="false">
+    Yes, within 24 hours of claiming, to allow flexibility.
+  </Expandable>
+</ExpandableGroup>
+
+```javascript
+const claimItem = async (itemId) => {
+  const response = await fetch(`/api/items/${itemId}/claim`, {
+    method: 'POST'
+  });
+  return response.json();
+};
+```
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+// Check claim status
+const status = await fetch('/api/claims/status');
+const claims = await status.json();
+  ```
+  ```python
+# Check claim status
+import requests
+response = requests.get('/api/claims/status')
+claims = response.json()
+  ```
+</CodeGroup>
+
+Effective claiming requires awareness of group dynamics and timely communication. Use the platform's tools to coordinate purchases and avoid disappointment.

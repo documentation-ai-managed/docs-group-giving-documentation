@@ -1,0 +1,79 @@
+---
+title: Private Discussions
+description: Managing private conversations within gift groups
+---
+
+## Facilitating Group Communication
+
+Private discussions allow group members to coordinate without spoiling surprises. These secure channels ensure everyone stays informed while maintaining gift secrecy.
+
+<Columns cols={2}>
+  <Card title="Group Chat" icon="message-circle" href="#chat">
+    Real-time messaging for all group members.
+  </Card>
+  <Card title="Admin Only" icon="shield" href="#admin">
+    Private channels for organizers to coordinate.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Public Discussions" icon="users">
+    Open to all group members for general coordination.
+  </Tab>
+  <Tab title="Private Messages" icon="lock">
+    One-on-one conversations for sensitive topics.
+  </Tab>
+</Tabs>
+
+<Callout kind="success">Use discussions to clarify wishlist items without revealing purchase plans.</Callout>
+
+<Expandable title="Discussion Guidelines" default-open="false">
+  Keep conversations focused on coordination and avoid discussing specific purchases.
+</Expandable>
+
+<Steps>
+  <Step title="Access Discussions" icon="message-square">
+    Navigate to the discussions tab in your group.
+  </Step>
+  <Step title="Start New Thread" icon="plus">
+    Create topics for different coordination needs.
+  </Step>
+  <Step title="Participate Actively" icon="thumbs-up">
+    Share information and ask questions appropriately.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="How to keep discussions spoiler-free?" default-open="true">
+    Focus on item preferences and availability rather than purchase details.
+  </Expandable>
+  <Expandable title="Can discussions be moderated?" default-open="false">
+    Group admins can moderate content and remove inappropriate messages.
+  </Expandable>
+</ExpandableGroup>
+
+```javascript
+const sendMessage = async (message) => {
+  const response = await fetch('/api/discussions/send', {
+    method: 'POST',
+    body: JSON.stringify({ message })
+  });
+  return response.json();
+};
+```
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+// Get discussion threads
+const threads = await fetch('/api/discussions');
+const data = await threads.json();
+  ```
+  ```python
+# Get discussion threads
+import requests
+response = requests.get('/api/discussions')
+data = response.json()
+  ```
+</CodeGroup>
+
+Maintaining productive discussions requires clear guidelines and active moderation. Use these tools to enhance group coordination while preserving the element of surprise.
